@@ -1,5 +1,8 @@
 local M = {}
 
+local ucolors = require("catppuccin.utils.colors")
+local lui = require("catppuccin.lib.ui")
+
 function M.get()
 	return {
 		Comment = { fg = cp.surface2, style = cnf.styles.comments }, -- just comments
