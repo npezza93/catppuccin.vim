@@ -90,7 +90,7 @@ function M.get()
     TSMath = { fg = cp.text },
     TSEnviroment = { fg = cp.text },
     TSEnviromentName = { fg = cp.text },
-		TSKeywordReturn = { fg = cp.mauve, style = { cnf.styles.keywords or "NONE" } },
+		TSKeywordReturn = { fg = cp.mauve },
 		TSNote = { fg = cp.base, bg = cp.blue },
 		TSWarning = { fg = cp.base, bg = cp.yellow },
 		TSDanger = { fg = cp.base, bg = cp.red },
