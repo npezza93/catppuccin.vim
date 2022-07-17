@@ -1,6 +1,6 @@
 local M = {}
 
-function M.get(cp)
+function M.get()
 	-- local delimeters = cp.overlay2
 	local operators = cp.sky
 	local cl = cp.mauve -- conditionals, loops

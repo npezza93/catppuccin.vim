@@ -1,8 +1,8 @@
 local M = {}
 
-function M.get(cp)
+function M.get()
 	return {
-		gitcommitOverflow = { fg = cp.red },
+    gitcommitOverflow = { fg = cp.red },
     gitcommitUnmerged = { fg = cp.green },
     gitcommitBranch = { fg = cp.purple },
     gitcommitDiscardedType = { fg = cp.red },
