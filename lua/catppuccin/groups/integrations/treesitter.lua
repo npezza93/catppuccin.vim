@@ -82,27 +82,27 @@ function M.get()
     TSPunctDelimiter = { fg = cp.text }, -- overlay2
     TSPunctBracket = { fg = cp.rosewater }, -- overlay2
     TSText = { fg = cp.text },
-    TSStrong = { fg = cp.text, style = "bold" }, -- maroon
-    TSEmphasis = { fg = cp.text, style = "italic" }, -- maroon
+    TSStrong = { fg = cp.text, style = { "bold" } }, -- maroon
+    TSEmphasis = { fg = cp.text, style = { "italic" } }, -- maroon
     TSUnderline = { fg = cp.text },
     TSStrike = { fg = cp.text },
-    TSTitle = { fg = cp.text, style = "bold" }, -- blue
+    TSTitle = { fg = cp.text, style = { "bold" } }, -- blue
     TSMath = { fg = cp.text },
     TSEnviroment = { fg = cp.text },
     TSEnviromentName = { fg = cp.text },
-		TSKeywordReturn = { fg = cp.mauve, style = cnf.styles.keywords or "NONE" },
+		TSKeywordReturn = { fg = cp.mauve, style = { cnf.styles.keywords or "NONE" } },
 		TSNote = { fg = cp.base, bg = cp.blue },
 		TSWarning = { fg = cp.base, bg = cp.yellow },
 		TSDanger = { fg = cp.base, bg = cp.red },
 		tomlTSProperty = { fg = cp.blue }, -- Differentiates between string and properties
-		TSTagAttribute = { fg = cp.teal, style = "italic" }, -- Tags like html tag names.
+		TSTagAttribute = { fg = cp.teal, style = { "italic" } }, -- Tags like html tag names.
 
 		TSComment = { fg = cp.surface1 },
 
 		-- Markdown tresitter parser support
 		TSURI = { fg = cp.rosewater, style = { "italic", "underline" } }, -- urls, links and emails
-		TSLiteral = { fg = cp.teal, style = "italic" }, -- used for inline code in markdown and for doc in python (""")
-		TSTextReference = { fg = cp.lavender, style = "bold" }, -- references
+		TSLiteral = { fg = cp.teal, style = { "italic" } }, -- used for inline code in markdown and for doc in python (""")
+		TSTextReference = { fg = cp.lavender, style = { "bold" } }, -- references
 
 		-- json
 		jsonTSLabel = { fg = cp.blue }, -- For labels: label: in C and :label: in Lua.
