@@ -51,8 +51,6 @@ function M.get()
 		PmenuThumb = { bg = cp.overlay0 }, -- Popup menu: Thumb of the scrollbar.
 		Question = { fg = cp.blue }, -- |hit-enter| prompt and yes/no questions
 		QuickFixLine = { bg = cp.surface1, style = { "bold" } }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-		Search = { bg = ucolors.darken(cp.sky, 0.30, cp.base), fg = cp.text }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand oucp.
-		IncSearch = { bg = ucolors.darken(cp.sky, 0.90, cp.base), fg = cp.mantle }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
 		CurSearch = { bg = cp.red, fg = cp.mantle }, -- 'cursearch' highlighting: highlights the current search you're on differently
 		SpecialKey = { fg = cp.text }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' textspace. |hl-Whitespace|
 		SpellBad = { sp = cp.red, style = { "undercurl" } }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
@@ -65,7 +63,6 @@ function M.get()
 		TabLineFill = { bg = cp.black }, -- tab pages line, where there are no labels
 		TabLineSel = { fg = cp.green, bg = cp.surface1 }, -- tab pages line, active tab page label
 		Title = { fg = cp.blue, style = { "bold" } }, -- titles for output from ":set all", ":autocmd" etcp.
-		Visual = { bg = cp.surface1, style = { "bold" } }, -- Visual mode selection
 		VisualNOS = { bg = cp.surface1, style = { "bold" } }, -- Visual mode selection when vim is "Not Owning the Selection".
 		WarningMsg = { fg = cp.yellow }, -- warning messages
 		Whitespace = { fg = cp.surface1 }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
