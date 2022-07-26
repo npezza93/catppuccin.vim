@@ -68,7 +68,7 @@ function M.get()
 		Whitespace = { fg = cp.surface1 }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
 		WildMenu = { bg = cp.overlay0 }, -- current match in 'wildmenu' completion
 		WinBar = { fg = cp.surface0 },
-		WinBarContent = { bg = cp.mauve, fg = cp.surface0 },
+		WinBarContent = { bg = cp.peach, fg = cp.surface0 },
 		-- These groups are not listed as default vim groups,
 		-- but they are defacto standard group names for syntax highlighting.
 		-- overlay0ed out groups should chain up to their "preferred" group by
