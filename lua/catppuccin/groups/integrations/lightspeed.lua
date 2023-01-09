@@ -10,12 +10,14 @@ local function get_prepared()
 	return is_prepared
 end
 
+local ucolors = require("catppuccin.utils.colors")
+
 function M.get()
 	if not get_prepared() then
 		set_prepared(vim.api.nvim_create_autocmd("ColorScheme", {
 			callback = function()
-				if pcall(require, "lightspeed") then
-					require("lightspeed").init_highlight()
+				if pcall(require, "leap") then
+					require("leap").init_highlight()
 				end
 			end,
 		}))
@@ -23,20 +25,21 @@ function M.get()
 	end
 
 	return {
-		LightspeedLabel = { bg = cp.surface1, fg = cp.text },
-		LightspeedOverlapped = { bg = cp.surface1, fg = cp.text },
-		LightspeedLabelDistant = { bg = cp.mauve, fg = cp.text },
-		LightspeedLabelDistantOverlapped = { bg = cp.mauve, fg = cp.text },
-		LightspeedShortcut = { bg = cp.base, fg = cp.peach, style = { "italic" } },
-		LightspeedShortcutOverlapped = { bg = cp.base, fg = cp.peach, style = { "bold" } },
-		LightspeedMaskedChar = { bg = cp.base, fg = cp.red, style = { "undercurl" } },
-		LightspeedGreyWash = { bg = cp.base, fg = cp.overlay0 },
-		LightspeedUnlabeledMatch = { bg = cp.base, fg = cp.red, style = { "underline" } },
-		LightspeedOneCharMatch = { bg = cp.base, fg = cp.red, style = { "underline" } },
-		LightspeedUniqueChar = { bg = cp.base, fg = cp.green, style = { "strikethrough" } },
-		LightspeedPendingOpArea = { bg = cp.base, fg = cp.green, style = { "strikethrough" } },
-		LightspeedPendingChangeOpArea = { bg = cp.base, fg = cp.green, style = { "strikethrough" } },
-		LightspeedCursor = { fg = cp.base, bg = cp.text },
+    LeapBackdrop = { link = 'Comment' },
+		LeapMatch = {
+ 			fg = ucolors.vary_color({ latte = "#222222" }, ucolors.brighten(cp.green, 0.3)),
+ 			style = { "underline", "nocombine" },
+ 		},
+		LeapLabelPrimary = {
+ 			fg = ucolors.vary_color({ latte = "#222222" }, cp.base),
+ 			bg = ucolors.vary_color({ latte = ucolors.brighten(cp.red, 0.4) }, ucolors.brighten(cp.green, 0.3)),
+ 			style = { "nocombine" },
+ 		},
+ 		LeapLabelSecondary = {
+ 			fg = ucolors.vary_color({ latte = "#222222" }, cp.base),
+			bg = ucolors.vary_color({ latte = ucolors.brighten(cp.sky, 0.3) }, cp.sky),
+ 			style = { "nocombine" },
+ 		},
 	}
 end
 
