@@ -1,22 +1,22 @@
 local M = {}
 
 function M.get()
-	-- local delimeters = cp.overlay2
-	local operators = cp.sky
-	local cl = cp.mauve -- conditionals, loops
-	local keywords = cp.mauve
+  -- local delimeters = cp.overlay2
+  local operators = cp.sky
+  local cl = cp.mauve -- conditionals, loops
+  local keywords = cp.mauve
 
-	local math_logic = cp.peach
-	return {
+  local math_logic = cp.peach
+  return {
     -- pink
-    TSConditional = { fg = cp.pink },
-    TSException = { fg = cp.pink },
-    TSInclude = { fg = cp.pink },
-    TSKeyword = { fg = cp.pink },
-    TSKeywordFunction = { fg = cp.pink },
-    TSKeywordOperator = { fg = cp.pink },
-    TSRepeat = { fg = cp.pink },
-    TSOperator = { fg = cp.pink },
+    "@conditional" = { fg = cp.pink },
+    "@exception" = { fg = cp.pink },
+    "@include" = { fg = cp.pink },
+    "@keyword" = { fg = cp.pink },
+    "@keyword.function" = { fg = cp.pink },
+    "@keyword.operator" = { fg = cp.pink },
+    "@repeat" = { fg = cp.pink },
+    "@operator" = { fg = cp.pink },
     RubyModelMacro = { fg = cp.pink },
     RubyModelCallback = { fg = cp.pink },
     RubyModelValidations = { fg = cp.pink },
@@ -25,97 +25,97 @@ function M.get()
     rubyControl = { fg = cp.pink },
     rubyCurelyBlock = { fg = cp.pink },
 
-    TSFuncMacro = { fg = cp.teal },
+    "@function.macro" = { fg = cp.teal },
 
     -- yellow
-    TSConstructor = { fg = cp.yellow },
-    TSType = { fg = cp.yellow },
-    TSConstant = { fg = cp.yellow },
-    TSBoolean = { fg = cp.yellow },
-    TSFloat = { fg = cp.yellow },
-    TSNumber = { fg = cp.yellow },
-    TSConstBuiltin = { fg = cp.yellow },
-    TSConstMacro = { fg = cp.yellow },
-    TSTypeBuiltin = { fg = cp.yellow },
+    "@constructor" = { fg = cp.yellow },
+    "@type" = { fg = cp.yellow },
+    "@constant" = { fg = cp.yellow },
+    "@boolean" = { fg = cp.yellow },
+    "@float" = { fg = cp.yellow },
+    "@number" = { fg = cp.yellow },
+    "@constant.builtin" = { fg = cp.yellow },
+    "@constant.macro" = { fg = cp.yellow },
+    "@type.builtin" = { fg = cp.yellow },
     rubyPredefinedConstant = { fg = cp.yellow },
     rubyPseudoVariable = { fg = cp.yellow },
     rubyConstant = { fg = cp.yellow },
     rubyBoolean = { fg = cp.yellow },
 
     -- green
-    TSString = { fg = cp.green },
-    TSLiteral = { fg = cp.green },
-    TSLiteral = { fg = cp.green },
+    "@string" = { fg = cp.green },
+    "@text.literal" = { fg = cp.green },
     rubyString = { fg = cp.green },
 
     -- blue
-    TSMethod = { fg = cp.blue },
-    TSFunction = { fg = cp.blue },
+    "@method" = { fg = cp.blue },
+    "@function" = { fg = cp.blue },
 
     -- sky
-    TSAttribute = { fg = cp.sky },
-    TSField = { fg = cp.sky },
-    TSFuncBuiltin = { fg = cp.sky }, -- or peach
-    TSProperty = { fg = cp.sky },
-    TSSymbol = { fg = cp.sky },
-    TSStringRegex = { fg = cp.sky },
-    TSStringEscape = { fg = cp.sky }, -- or pink
+    "@attribute" = { fg = cp.sky },
+    "@field" = { fg = cp.sky },
+    "@function.builtin" = { fg = cp.sky }, -- or peach
+    "@property" = { fg = cp.sky },
+    "@symbol" = { fg = cp.sky },
+    "@symbol.ruby" = { fg = cp.sky },
+    "@string.regex" = { fg = cp.sky },
+    "@string.escape" = { fg = cp.sky }, -- or pink
     rubySymbol = { fg = cp.sky },
 
     -- red
-    TSLabel = { fg = cp.maroon }, -- sapphire
-    TSTag = { fg = cp.red }, -- mauve
-    TSTagDelimiter = { fg = cp.red }, -- sky
-    TSVariableBuiltin = { fg = cp.red },
-    TSGlobalVariable = { fg = cp.red },
-    TSPunctSpecial = { fg = cp.red }, -- sky
-    TSParameter = { fg = cp.red }, -- maroon
+    "@label" = { fg = cp.maroon }, -- sapphire
+    "@tag" = { fg = cp.red }, -- mauve
+    "@tag.delimiter" = { fg = cp.red }, -- sky
+    "@variable.builtin" = { fg = cp.red },
+    "@variable.global" = { fg = cp.red },
+    "@punctuation.special" = { fg = cp.red }, -- sky
+    "@parameter" = { fg = cp.red }, -- maroon
     rubyBlockParameterList = { fg = cp.red },
 
     -- text
-    TSAnnotation = { fg = cp.text },
-    TSCharacter = { fg = cp.text },
-    TSError = { fg = cp.text },
-    TSNamespace = { fg = cp.text }, -- blue
-    TSNone = { fg = cp.text },
-    TSParameterReference = { fg = cp.text },
-    TSPunctDelimiter = { fg = cp.text }, -- overlay2
-    TSPunctBracket = { fg = cp.rosewater }, -- overlay2
-    TSText = { fg = cp.text },
-    TSStrong = { fg = cp.text, style = { "bold" } }, -- maroon
-    TSEmphasis = { fg = cp.text, style = { "italic" } }, -- maroon
-    TSUnderline = { fg = cp.text },
-    TSStrike = { fg = cp.text },
-    TSTitle = { fg = cp.text, style = { "bold" } }, -- blue
-    TSMath = { fg = cp.text },
-    TSEnviroment = { fg = cp.text },
-    TSEnviromentName = { fg = cp.text },
-		TSKeywordReturn = { fg = cp.mauve },
-		TSNote = { fg = cp.base, bg = cp.blue },
-		TSWarning = { fg = cp.base, bg = cp.yellow },
-		TSDanger = { fg = cp.base, bg = cp.red },
-		tomlTSProperty = { fg = cp.blue }, -- Differentiates between string and properties
-		TSTagAttribute = { fg = cp.teal, style = { "italic" } }, -- Tags like html tag names.
+    "@annotation" = { fg = cp.text },
+    "@character" = { fg = cp.text },
+    "@error" = { fg = cp.text },
+    "@namespace" = { fg = cp.text }, -- blue
+    "@none" = { fg = cp.text },
+    -- TSParameterReference = { fg = cp.text },
+    "@punctuation.delimiter" = { fg = cp.text }, -- overlay2
+    "@punctuation.bracket" = { fg = cp.rosewater }, -- overlay2
+    "@text" = { fg = cp.text },
+    "@text.strong" = { fg = cp.text, style = { "bold" } }, -- maroon
+    "@text.emphasis" = { fg = cp.text, style = { "italic" } }, -- maroon
+    "@text.underline" = { fg = cp.text },
+    "@text.strike" = { fg = cp.text },
+    "@text.title" = { fg = cp.text, style = { "bold" } }, -- blue
+    "@text.math" = { fg = cp.text },
+    "@text.environment" = { fg = cp.text },
+    "@text.environment.name" = { fg = cp.text },
+    "@keyword.return" = { fg = cp.mauve },
+    "@text.note" = { fg = cp.base, bg = cp.blue },
+    "@text.warning" = { fg = cp.base, bg = cp.yellow },
+    "@text.danger" = { fg = cp.base, bg = cp.red },
+    "@property.toml" = { fg = cp.blue }, -- Differentiates between string and properties
+    "@tag.attribute" = { fg = cp.teal, style = { "italic" } }, -- Tags like html tag names.
 
-		TSComment = { fg = cp.surface1 },
+    "@comment" = { fg = cp.surface1 },
 
-		-- Markdown tresitter parser support
-		TSURI = { fg = cp.rosewater, style = { "italic", "underline" } }, -- urls, links and emails
-		TSLiteral = { fg = cp.teal, style = { "italic" } }, -- used for inline code in markdown and for doc in python (""")
-		TSTextReference = { fg = cp.lavender, style = { "bold" } }, -- references
+    -- Markdown tresitter parser support
+    "@text.uri" = { fg = cp.rosewater, style = { "italic", "underline" } }, -- urls, links and emails
+    "@text.literal" = { fg = cp.teal, style = { "italic" } }, -- used for inline code in markdown and for doc in python (""")
+    "@text.reference" = { fg = cp.lavender, style = { "bold" } }, -- references
 
-		-- json
-		jsonTSLabel = { fg = cp.blue }, -- For labels: label: in C and :label: in Lua.
+    -- json
+    "@label.json" = { fg = cp.blue }, -- For labels: label: in C and :label: in Lua.
 
-		-- lua
-		luaTSConstructor = { fg = cp.lavender }, -- For constructor calls and definitions: = { } in Lua, and Java constructors.
+    -- lua
+    "@constructor.lua" = { fg = cp.lavender }, -- For constructor calls and definitions: = { } in Lua, and Java constructors.
 
-		-- cpp
-		cppTSProperty = { fg = cp.rosewater },
+    -- cpp
+    "@property.cpp" = { fg = cp.rosewater },
 
-		-- yaml
-		yamlTSField = { fg = cp.blue }, -- For fields.
-	}
+    -- yaml
+    "@field.yaml" = { fg = cp.blue }, -- For fields.
+  }
 end
 
 return M
