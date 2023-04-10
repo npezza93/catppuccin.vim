@@ -17,13 +17,10 @@ function M.get()
     ["@keyword.operator"] = { fg = cp.pink },
     ["@repeat"] = { fg = cp.pink },
     ["@operator"] = { fg = cp.pink },
-    RubyModelMacro = { fg = cp.pink },
-    RubyModelCallback = { fg = cp.pink },
-    RubyModelValidations = { fg = cp.pink },
-    rubyHelper = { fg = cp.pink },
-    rubyViewHelper = { fg = cp.pink },
-    rubyControl = { fg = cp.pink },
-    rubyCurelyBlock = { fg = cp.pink },
+    ["@view_helper.ruby"] = { fg = cp.pink },
+    ["@model_macro.ruby"] = { fg = cp.pink },
+    ["@model_callback.ruby"] = { fg = cp.pink },
+    ["@model_validations.ruby"] = { fg = cp.pink },
 
     ["@function.macro"] = { fg = cp.teal },
 
@@ -37,15 +34,10 @@ function M.get()
     ["@constant.builtin"] = { fg = cp.yellow },
     ["@constant.macro"] = { fg = cp.yellow },
     ["@type.builtin"] = { fg = cp.yellow },
-    rubyPredefinedConstant = { fg = cp.yellow },
-    rubyPseudoVariable = { fg = cp.yellow },
-    rubyConstant = { fg = cp.yellow },
-    rubyBoolean = { fg = cp.yellow },
 
     -- green
     ["@string"] = { fg = cp.green },
     ["@text.literal"] = { fg = cp.green },
-    rubyString = { fg = cp.green },
 
     -- blue
     ["@method"] = { fg = cp.blue },
@@ -60,7 +52,6 @@ function M.get()
     ["@symbol.ruby"] = { fg = cp.sky },
     ["@string.regex"] = { fg = cp.sky },
     ["@string.escape"] = { fg = cp.sky }, -- or pink
-    rubySymbol = { fg = cp.sky },
 
     -- red
     ["@label"] = { fg = cp.maroon }, -- sapphire
@@ -70,7 +61,6 @@ function M.get()
     ["@variable.global"] = { fg = cp.red },
     ["@punctuation.special"] = { fg = cp.red }, -- sky
     ["@parameter"] = { fg = cp.red }, -- maroon
-    rubyBlockParameterList = { fg = cp.red },
 
     -- text
     ["@annotation"] = { fg = cp.text },
