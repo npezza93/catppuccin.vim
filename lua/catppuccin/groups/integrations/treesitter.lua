@@ -10,12 +10,16 @@ function M.get()
   return {
     -- pink
     ["@conditional"] = { fg = cp.pink },
+    ["@keyword.conditional"] = { fg = cp.pink },
     ["@exception"] = { fg = cp.pink },
+    ["@keyword.exception"] = { fg = cp.pink },
     ["@include"] = { fg = cp.pink },
+    ["@keyword.include"] = { fg = cp.pink },
     ["@keyword"] = { fg = cp.pink },
     ["@keyword.function"] = { fg = cp.pink },
     ["@keyword.operator"] = { fg = cp.pink },
     ["@repeat"] = { fg = cp.pink },
+    ["@keyword.repeat"] = { fg = cp.pink },
     ["@operator"] = { fg = cp.pink },
     ["@view_helper.ruby"] = { fg = cp.pink },
     ["@model_macro.ruby"] = { fg = cp.pink },
