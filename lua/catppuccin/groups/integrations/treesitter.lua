@@ -18,6 +18,7 @@ function M.get()
     ["@keyword"] = { fg = cp.pink },
     ["@keyword.function"] = { fg = cp.pink },
     ["@keyword.operator"] = { fg = cp.pink },
+    ["@keyword.modifier"] = { fg = cp.pink },
     ["@repeat"] = { fg = cp.pink },
     ["@keyword.repeat"] = { fg = cp.pink },
     ["@operator"] = { fg = cp.pink },
