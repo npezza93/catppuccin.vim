@@ -61,6 +61,8 @@ function M.get()
     -- red
     ["@label"] = { fg = cp.maroon }, -- sapphire
     ["@tag"] = { fg = cp.red }, -- mauve
+    ["@tag.html"] = { fg = cp.red }, -- mauve
+    ["@tag.attribute"] = { fg = cp.teal }, -- Tags like html tag names.
     ["@tag.delimiter"] = { fg = cp.red }, -- sky
     ["@variable.builtin"] = { fg = cp.red },
     ["@variable.global"] = { fg = cp.red },
@@ -90,7 +92,6 @@ function M.get()
     ["@text.warning"] = { fg = cp.base, bg = cp.yellow },
     ["@text.danger"] = { fg = cp.base, bg = cp.red },
     ["@property.toml"] = { fg = cp.blue }, -- Differentiates between string and properties
-    ["@tag.attribute"] = { fg = cp.teal, style = { "italic" } }, -- Tags like html tag names.
 
     ["@comment"] = { fg = cp.surface1 },
 
